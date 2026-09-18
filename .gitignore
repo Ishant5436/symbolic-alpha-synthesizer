@@ -1,0 +1,28 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.dylib
+*.o
+*.a
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Local data & logs
+data/*.parquet
+data/alpha_vault.json
+logs/
+.DS_Store
