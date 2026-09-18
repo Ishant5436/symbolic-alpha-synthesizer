@@ -42,13 +42,13 @@ Symbolic Alpha Synthesizer is an autonomous evolutionary compiler that searches 
   3. Regime Stability Hurdle: Positive correlation in $\ge 65\%$ of all validation eras.
 * **Alpha Vault:** Automatically catalogs winning orthogonal formulas in JSON format and augments live feature pipelines.
 
-### Power of 10 Safety Invariants Compliance
-The C++ core strictly enforces Gerard J. Holzmann's Power of 10 Safety Rules:
-* **Zero Dynamic Memory on Hot Path:** A fixed memory arena is allocated at boot; zero `malloc` or `new` calls during bytecode execution.
-* **Function Length:** All functions strictly $\le 60$ lines.
-* **Assertion Density:** Minimum 2 assertions per function validating pointer non-nullness and index boundaries.
-* **Bounded Execution:** Compile-time limits on bytecode instruction count ($L \le 64$) and tree depth ($D \le 4$).
-* **Pedantic Clean Build:** Zero warnings under `-Wall -Wextra -Werror` verified by static AST parsing.
+### Mission-Critical Architectural Invariants
+The C++ core strictly enforces deterministic safety invariants:
+* **Zero-Allocation Hot Path:** A fixed memory arena is allocated at boot; zero `malloc` or `new` calls during bytecode execution.
+* **Atomic Function Geometry:** All functions strictly bounded to $\le 60$ lines for auditable cognitive clarity and instruction cache locality.
+* **Continuous Invariant Assertions:** Minimum 2 assertions per function validating pointer non-nullness and index boundaries.
+* **Bounded Execution Horizons:** Strict compile-time limits on bytecode instruction count ($L \le 64$) and tree depth ($D \le 4$).
+* **Pedantic Static Compilation Gate:** Zero warnings under `-Wall -Wextra -Werror -std=c++20 -O3` verified by static AST parsing.
 
 ### Performance Benchmarks (Apple Silicon M5 Pro)
 * **Row Evaluation Throughput:** 274,000,000 row-evaluations/sec.

@@ -68,20 +68,20 @@ The execution kernel processes candidate bytecode expressions natively on vector
 
 ---
 
-## 4. Deterministic Safety-Critical Standards (Power of 10)
+## 4. Mission-Critical Architectural Invariants
 
-The C++ vector engine strictly adheres to Gerard J. Holzmann's Power of 10 Safety Rules for high-stakes financial computing:
+The C++ vector engine enforces deterministic high-assurance safety invariants for mission-critical financial computing:
 
-1. **Simple Control Flow:** Zero `goto`, `setjmp`, `longjmp`, or direct/indirect recursion.
-2. **Bounded Loops:** All iteration bounds across row counts are strictly checked against `CHIMERA_MAX_ROWS`.
-3. **No Dynamic Memory After Init:** Scratch memory buffers are pre-allocated at startup; zero allocation occurs during bytecode execution.
-4. **Function Length:** Every function is strictly $\le 60$ lines of code.
-5. **Assertion Density:** Minimum of 2 assertions per operational function validating pointer non-nullness, array boundaries, and parameter invariants.
-6. **Smallest Scope:** All loop iterators and intermediate variables are declared at minimal scope.
-7. **Check All Returns & Parameters:** All return values and input parameters are explicitly validated.
-8. **No Preprocessor Macros:** Zero preprocessor function macros or complex `#ifdef` blocks.
-9. **Pointer Safety:** Maximum of one level of dereferencing; zero function pointers on the hot path.
-10. **Zero-Warning Static Analysis:** Compiles under pedantic `-Wall -Wextra -Werror` with zero warnings, verified by mechanical static AST parsing (`scripts/audit_safety_invariants.py`).
+1. **Control Flow Determinism:** Zero `goto`, `setjmp`, `longjmp`, or direct/indirect recursion.
+2. **Bounded Execution Horizons:** All iteration bounds across row counts are strictly checked against `CHIMERA_MAX_ROWS`.
+3. **Zero-Allocation Hot Path:** Scratch memory buffers are pre-allocated at startup; zero dynamic allocation occurs during bytecode execution.
+4. **Atomic Function Geometry:** Every function is strictly $\le 60$ lines of code for auditable comprehension and cache locality.
+5. **Continuous Invariant Assertions:** Minimum of 2 assertions per operational function validating pointer non-nullness, array boundaries, and parameter invariants.
+6. **Minimal Scope Enclosure:** All loop iterators and intermediate variables are declared at the smallest possible scope.
+7. **Exhaustive Parameter & Return Verification:** All return values and input parameters are explicitly validated at function boundaries.
+8. **Zero-Macro Preprocessor Hygiene:** Zero preprocessor function macros or complex `#ifdef` blocks to prevent AST divergence.
+9. **Single-Indirection Pointer Safety:** Maximum of one level of dereferencing; zero function pointers on the hot path.
+10. **Pedantic Static Compilation Gate:** Compiles under pedantic `-Wall -Wextra -Werror -std=c++20 -O3` with zero warnings, verified by mechanical static AST parsing (`scripts/audit_safety_invariants.py`).
 
 ---
 
