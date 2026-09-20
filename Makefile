@@ -7,6 +7,9 @@ all: csrc test
 csrc:
 	$(MAKE) -C csrc
 
+cmake-build:
+	cmake -B build && cmake --build build
+
 test: csrc
 	PYTHONPATH=src $(VENV_PYTEST) tests/ -v
 
@@ -27,4 +30,4 @@ clean:
 	rm -rf build dist *.egg-info .pytest_cache
 	find . -type d -name __pycache__ -exec rm -rf {} +
 
-.PHONY: all csrc test audit demo benchmark mine clean
+.PHONY: all csrc cmake-build test audit demo benchmark mine clean

@@ -99,11 +99,24 @@ The C++ vector engine enforces deterministic high-assurance safety invariants fo
 
 ### 1. Build and Test (< 3 Seconds)
 
+#### Option A: Modern CMake Workflow
 ```bash
 # Clone repository
 git clone https://github.com/Ishant5436/symbolic-alpha-synthesizer.git
 cd symbolic-alpha-synthesizer
 
+# Configure and compile native C++ core
+cmake -B build && cmake --build build
+
+# Run Power of 10 static AST audit
+cmake --build build --target audit
+
+# Run complete 17-test suite
+cmake --build build --target run_tests
+```
+
+#### Option B: Classic Make Workflow
+```bash
 # Compile native C++ dynamic library
 make csrc
 

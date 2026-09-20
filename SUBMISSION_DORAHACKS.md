@@ -63,15 +63,14 @@ The C++ core strictly enforces deterministic safety invariants:
 git clone https://github.com/Ishant5436/symbolic-alpha-synthesizer.git
 cd symbolic-alpha-synthesizer
 
-# Compile native C++ dynamic library
+# Option A: Modern CMake Workflow
+cmake -B build && cmake --build build
+cmake --build build --target audit
+cmake --build build --target run_tests
+
+# Option B: Classic Make Workflow
 make csrc
-
-# Run complete test suite (17 tests)
 make test
-
-# Run Power of 10 static AST audit
 make audit
-
-# Run 1-second live demonstration and benchmark
 make demo
 ```
