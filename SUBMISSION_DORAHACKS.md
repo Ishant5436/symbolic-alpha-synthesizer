@@ -1,30 +1,29 @@
 # DoraHacks Submission Dossier: Symbolic-Alpha-Synthesizer
 
 ## 1. Hackathon Target Profile
-* **Primary Target:** [The Turing Test Hackathon 2026](https://dorahacks.io/hackathon)
+* **Active Target:** [MunichTech Innovation Hackathon 2026 – Build Applied Solutions for Industry](https://dorahacks.io/hackathon/2019/tracks)
+  * **Tracks:** Applied AI for Real-World Impact & Industrial AI / DeepTech
+  * **BUIDL Profile:** [#48962](https://dorahacks.io/buidl/48962)
+  * **Eligibility:** Code-only submission with working C++20 engine, tests, and live demo
+* **Co-Target:** [The Turing Test Hackathon 2026](https://dorahacks.io/hackathon)
   * **Focus:** Agentic AI, Quant Systems, Financial Computation, Autonomous Decision Making
   * **Prize Pool:** $120,000 USD
-  * **Eligibility:** Code-only submission (GitHub repo + README + automated demo)
-* **Secondary Target:** [BUIDL CTC 2026 Fall](https://dorahacks.io/hackathon)
-  * **Focus:** Cross-Chain DeFi, AI, Financial Engineering
-* **Tertiary Target:** [Casper Agentic Buildathon 2026](https://dorahacks.io/hackathon)
-  * **Focus:** Autonomous AI Agent Skills, Quantitative Execution
 
 ---
 
 ## 2. BUIDL Profile & Form Fields (Copy-Paste Ready)
 
 ### Project Name
-`Symbolic-Alpha-Synthesizer: Deterministic C++20 Evolutionary Engine for Mathematical Alpha Discovery`
+`Symbolic-Alpha-Synthesizer: Deterministic C++20 Evolutionary Engine for Mathematical Alpha & Sensor Discovery`
 
 ### Tagline (One-Liner)
-A high-performance C++20 ARM64 vectorized genetic programming compiler discovering non-linear, human-interpretable mathematical alphas for quantitative financial markets.
+A high-performance C++20 ARM64 vectorized genetic programming compiler discovering non-linear, human-interpretable mathematical equations for quantitative finance and industrial IoT.
 
 ### Repository URL
 `https://github.com/Ishant5436/symbolic-alpha-synthesizer`
 
 ### Primary Track
-`Agentic AI / Quantitative Finance / Developer Infrastructure`
+`Applied AI for Real-World Impact / Industrial AI / DeepTech`
 
 ---
 

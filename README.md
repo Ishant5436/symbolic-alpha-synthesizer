@@ -5,7 +5,7 @@
 [![Standards: Power of 10](https://img.shields.io/badge/Safety_Critical-Power_of_10-brightgreen.svg)](https://en.wikipedia.org/wiki/The_Power_of_10:__Rules_for_Developing_Safety-Critical_Code)
 [![Platform: Apple Silicon & Linux](https://img.shields.io/badge/Platform-Apple_Silicon_%7C_Linux_ARM64_%7C_x86_64-blueviolet.svg)](#)
 
-A deterministic, high-performance C++20 and Python evolutionary engine for continuous mathematical alpha discovery in quantitative financial markets.
+A deterministic, high-performance C++20 and Python evolutionary compiler discovering closed-form mathematical expressions for quantitative financial markets, industrial IoT, and complex systems.
 
 ---
 
@@ -50,7 +50,17 @@ standard tabular models experience decaying residual edge.
 
 ---
 
-## 3. High-Throughput C++20 Vector Engine (`libchimera_eval`)
+## 3. Industrial IoT & Applied Predictive Discovery (Industry 4.0)
+
+Beyond quantitative finance, `Symbolic Alpha Synthesizer` addresses a fundamental challenge in **Industrial IoT, Predictive Maintenance, and Physical Process Control**:
+
+* **Eliminating the Black-Box Risk:** In manufacturing and industrial infrastructure, standard deep neural networks fail to gain certification because control engineers cannot verify physical conservation laws or analytically prove bounded outputs.
+* **Closed-Form Governing Equations:** Our AST compiler searches the space of symbolic algebraic interactions, extracting human-interpretable equations from multi-sensor telemetry (thermal gradients, vibration frequencies, hydraulic pressures).
+* **Deterministic Edge Execution:** The compiled expressions execute in native C++20 at over **259,000,000 sensor-ticks per second** on edge ARM64 hardware (Apple Silicon, Raspberry Pi, industrial ARM Linux) with **zero dynamic heap allocation on the hot path**. Control engineers can verify stability proofs directly on the generated algebraic AST.
+
+---
+
+## 4. High-Throughput C++20 Vector Engine (`libchimera_eval`)
 
 The execution kernel processes candidate bytecode expressions natively on vectorized memory buffers:
 
@@ -68,9 +78,9 @@ The execution kernel processes candidate bytecode expressions natively on vector
 
 ---
 
-## 4. Mission-Critical Architectural Invariants
+## 5. Mission-Critical Architectural Invariants
 
-The C++ vector engine enforces deterministic high-assurance safety invariants for mission-critical financial computing:
+The C++ vector engine enforces deterministic high-assurance safety invariants for mission-critical computing:
 
 1. **Control Flow Determinism:** Zero `goto`, `setjmp`, `longjmp`, or direct/indirect recursion.
 2. **Bounded Execution Horizons:** All iteration bounds across row counts are strictly checked against `CHIMERA_MAX_ROWS`.
@@ -85,7 +95,7 @@ The C++ vector engine enforces deterministic high-assurance safety invariants fo
 
 ---
 
-## 5. Quickstart & Usage
+## 6. Quickstart & Usage
 
 ### 1. Build and Test (< 3 Seconds)
 
